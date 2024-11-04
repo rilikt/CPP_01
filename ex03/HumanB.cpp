@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:42:31 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 15:44:16 by timschmi         ###   ########.fr       */
+/*   Created: 2024/11/04 16:34:45 by timschmi          #+#    #+#             */
+/*   Updated: 2024/11/04 16:50:09 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstring>
-#include <iostream>
+#include "HumanB.hpp"
 
-int main(void)
+HumanB::HumanB(std::string name) : weapon(nullptr)
 {
-	std::string str = "HI THIS IS BRAIN";
+	this->name = name;
+}
 
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+void HumanB::setWeapon(Weapon &x)
+{
+	weapon = &x;
+	return;
+}
 
-	std::cout << &str << " | " << stringPTR << " | " << &stringREF << std::endl;
-
-	std::cout << str << " | " << *stringPTR << " | " << stringREF << std::endl;
-
-	return (0);
+void HumanB::attack(void)
+{
+	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	return; 
 }

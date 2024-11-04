@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:42:31 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 15:44:16 by timschmi         ###   ########.fr       */
+/*   Created: 2024/11/04 15:51:14 by timschmi          #+#    #+#             */
+/*   Updated: 2024/11/04 15:55:34 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstring>
-#include <iostream>
+#include "Weapon.hpp"
 
-int main(void)
+void Weapon::setType(std::string type)
 {
-	std::string str = "HI THIS IS BRAIN";
+	this->type = type;
+	return ;
+}
 
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+const std::string &Weapon::getType(void)
+{
+	const std::string &ref = type;
+	return (ref);
+}
 
-	std::cout << &str << " | " << stringPTR << " | " << &stringREF << std::endl;
-
-	std::cout << str << " | " << *stringPTR << " | " << stringREF << std::endl;
-
-	return (0);
+Weapon::Weapon(std::string type)
+{
+	this->type = type;
 }

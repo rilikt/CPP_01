@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:42:31 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 15:44:16 by timschmi         ###   ########.fr       */
+/*   Created: 2024/11/04 16:34:11 by timschmi          #+#    #+#             */
+/*   Updated: 2024/11/04 16:41:04 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstring>
-#include <iostream>
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int main(void)
+#include "Weapon.hpp"
+
+class HumanB
 {
-	std::string str = "HI THIS IS BRAIN";
+	private:
+		std::string name;
+		Weapon *weapon;
 
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+	public:
+		HumanB(std::string name);
+		void attack(void);
+		void setWeapon(Weapon &x);
 
-	std::cout << &str << " | " << stringPTR << " | " << &stringREF << std::endl;
+};
 
-	std::cout << str << " | " << *stringPTR << " | " << stringREF << std::endl;
-
-	return (0);
-}
+#endif

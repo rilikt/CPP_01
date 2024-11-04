@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:42:31 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 15:44:16 by timschmi         ###   ########.fr       */
+/*   Created: 2024/11/04 15:58:08 by timschmi          #+#    #+#             */
+/*   Updated: 2024/11/04 16:30:01 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstring>
-#include <iostream>
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-int main(void)
+#include "Weapon.hpp"
+
+class HumanA
 {
-	std::string str = "HI THIS IS BRAIN";
+	private:
+		std::string name;
+		Weapon &weapon;
 
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+	public:
+		HumanA(std::string name, Weapon &x);
+		void attack(void);
 
-	std::cout << &str << " | " << stringPTR << " | " << &stringREF << std::endl;
+};
 
-	std::cout << str << " | " << *stringPTR << " | " << stringREF << std::endl;
-
-	return (0);
-}
+#endif
