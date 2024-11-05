@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:59:05 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 18:06:28 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:26:01 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,49 +16,41 @@
 
 int main(int argc, char **argv)
 {
-	std::string s1, s2;
-	
-	if (argc != 4)
-	{
-		std::cerr << "error invalid input" << std::endl;
-		return(1);
-	}
-	
-	for(int i = 1; i < argc; i++)
-		std::cout << argv[i] << std::endl;
+	std::string s1, s2, line;
+	size_t index;
+	int i = 1;
 
+	if (argc != 4)
+		return(std::cerr << "Error: wrong number of arguments!" << std::endl, 1);
+	
 	s1 = argv[2];
 	s2 = argv[3];
-	
+
+	//opening input file to read from
 	std::ifstream input(argv[1]);
 	if (!input)
-	{
-		std::cerr << "input file error" << std::endl;
-		return(1);
-	}
-	
+		return(std::cerr << "input file error" << std::endl, 1);
+
+	//opening, creating output file to write to
 	std::ofstream output(std::strcat(argv[1], ".replace"));
-	// std::ofstream output("new.txt");
 	if (!output)
-	{
-		std::cerr << "output file error" << std::endl;
-		return(1);
-	}
-
-	std::string line;
-	std::string word;
-
-	// std::cout << s1 << s2 << std::endl;
+		return(std::cerr << "output file error" << std::endl, 1);
 	
-	while (input >> word)
+	while (std::getline(input, line))
 	{
-		if (word == s1)
-		{
-			output << s1;
-			std::cout << "alarm" << std::endl;
-		}
+		index = line.find(s1);
+		if (index == std::string::npos)
+			std::cout << "no match found in line: " << i << std::endl;
 		else
-			output << word;
+		{
+			line.erase(index, s1.length());
+			line.insert(index, s2);
+		}
+		
+		output << line;
+		if(!input.eof())
+			output << std::endl;
+		i++;
 	}
 
 	output.close();
