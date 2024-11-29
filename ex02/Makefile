@@ -6,22 +6,25 @@
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 14:42:20 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/04 15:24:09 by timschmi         ###   ########.fr        #
+#    Updated: 2024/11/29 13:02:33 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC = g++
+CC = c++
 
-NAME = brain
-CFLAGS = 
+NAME = brian
+CFLAGS = -std=c++17 -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $<
 
 clean:
 	rm -f $(OBJ)

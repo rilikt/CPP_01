@@ -6,22 +6,25 @@
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 14:42:20 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/04 15:45:28 by timschmi         ###   ########.fr        #
+#    Updated: 2024/11/29 13:02:51 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC = g++
+CC = c++
 
-NAME = brain
-CFLAGS = 
+NAME = violence
+CFLAGS = -std=c++17 -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $<
 
 clean:
 	rm -f $(OBJ)

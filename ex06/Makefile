@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+         #
+#    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 12:29:13 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/06 14:15:09 by h4ns             ###   ########.fr        #
+#    Updated: 2024/11/29 13:03:53 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC = g++
+CC = c++
 
 NAME = harlfilter
-CFLAGS = -std=c++17
+CFLAGS = -std=c++17 -Wall -Wextra -Werror
 
 all: $(NAME)
 
