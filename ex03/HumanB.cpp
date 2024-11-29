@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:34:45 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 16:50:09 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:28:31 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void HumanB::setWeapon(Weapon &x)
 
 void HumanB::attack(void)
 {
-	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	std::cout << "\033[31m" << name << " attacks with their " << weapon->getType() << "\033[0m" << std::endl;
 	return; 
 }

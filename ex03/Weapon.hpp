@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:45:36 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 16:00:46 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:23:00 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Weapon
 	private:
 		std::string type;
 	
-
 	public:
 		const std::string &getType(void);
 		void setType(std::string type);

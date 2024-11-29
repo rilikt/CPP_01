@@ -6,14 +6,13 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:54:10 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 16:44:06 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:03:08 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
-
 
 int main(void)
 {

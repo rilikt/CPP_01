@@ -6,25 +6,20 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:01:16 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 13:32:15 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:13:23 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-// Zombie::Zombie(std::string Name)
-// {
-// 	this->Name = Name;
-// }
-
 Zombie::~Zombie(void)
 {
-	std::cout << "Zombie destroyed: " << Name << std::endl;
+	std::cout << "\033[31m" << "Zombie destroyed: " << Name <<  "\033[0m" << std::endl;
 }
 
 void Zombie::announce(void)
 {
-	std::cout << Zombie::Name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << "\033[32m" << Zombie::Name << ": BraiiiiiiinnnzzzZ..." << "\033[0m" << std::endl;
 }
 
 void Zombie::set_name(std::string name)

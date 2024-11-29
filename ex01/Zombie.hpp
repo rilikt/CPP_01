@@ -6,10 +6,9 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:21:23 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 13:30:59 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:02:39 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
