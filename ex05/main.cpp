@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:29:33 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/05 14:52:27 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 13:23:26 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(void)
 	hs.complain("info");
 	hs.complain("warning");
 	hs.complain("error");
+	// hs.complain("invalid");
 
 	return (0);
 }

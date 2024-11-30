@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:29:29 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/05 13:36:12 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 13:10:48 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Harl
 		void error(void);
 	
 	public:
+		Harl() {};
+		~Harl() {};
 		void complain(std::string level);
 
 };

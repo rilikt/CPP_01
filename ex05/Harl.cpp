@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:29:36 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/05 14:50:39 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 13:22:51 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void Harl::debug()
 {
-	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
+	std::cout << "\033[33m" << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << "\033[0m" << std::endl;
 }
 
 void Harl::info()
 {
-	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << "\033[32m" << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << "\033[0m" << std::endl;
 }
 
 void Harl::warning()
 {
-	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
+	std::cout << "\033[31m" << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << "\033[0m" << std::endl;
 }
 
 void Harl::error()
 {
-	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+	std::cout << "\033[35m" << "This is unacceptable! I want to speak to the manager now." << "\033[0m" << std::endl;
 }
 
 void Harl::complain(std::string level)
@@ -42,13 +42,13 @@ void Harl::complain(std::string level)
 	};
 	
 	auto it = fctMap.find(level);
+	if (it == fctMap.end())
+	{
+		std::cerr << "\033[31m" << "Error: no matching function found for " + level << "\033[0m" << std::endl;
+		return ;
+	}
 
 	std::cout << it->first << std::endl;
 
-	void (Harl::*fctPtr)() = it->second;
-	(this->*fctPtr)();
-
-
-	
-	// void (Harl::*fctPtr)() = &Harl::level;
+	(this->*it->second)();
 }

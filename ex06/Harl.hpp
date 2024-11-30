@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:29:29 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/06 14:55:51 by h4ns             ###   ########.fr       */
+/*   Updated: 2024/11/30 13:30:37 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ class Harl
 		void error(void);
 	
 	public:
+		Harl() {};
+		~Harl() {};
 		void complain(std::string level);
 
 };

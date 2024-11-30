@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:21:23 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/29 15:02:39 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 12:22:57 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Zombie
 		std::string Name;
 
 	public:
-		// Zombie(std::string Name);
+		Zombie();
+		Zombie(std::string Name);
 		~Zombie(void);
 		void set_name(std::string name);
 		void announce( void );

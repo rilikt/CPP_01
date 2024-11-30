@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:42:31 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/04 15:44:16 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 12:41:30 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int main(void)
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
 
-	std::cout << &str << " | " << stringPTR << " | " << &stringREF << std::endl;
+	std::cout << "\033[35m" << &str << " | " << stringPTR << " | " << &stringREF << "\033[0m" << std::endl;
 
-	std::cout << str << " | " << *stringPTR << " | " << stringREF << std::endl;
+	std::cout << "\033[33m" << str << " | " << *stringPTR << " | " << stringREF << "\033[0m" << std::endl;
 
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:29:33 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/06 15:01:28 by h4ns             ###   ########.fr       */
+/*   Updated: 2024/11/30 13:37:59 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	Level eLevel = UNKNOWN;
 
 	if(argc != 2)
-		std::cout << "Error: wrong ammount of arguments" << std::endl;
+		std::cout << "\033[31m" << "Error: wrong ammount of arguments" << "\033[0m" << std::endl;
 	else
 	{
 		std::string level = argv[1];
@@ -38,14 +38,17 @@ int main(int argc, char **argv)
 		{
 			case DEBUG:
 				hs.complain("debug");
+				[[fallthrough]];
 			case INFO:
 				hs.complain("info");
+				[[fallthrough]];
 			case WARNING:
 				hs.complain("warning");
+				[[fallthrough]];
 			case ERROR:
 				hs.complain("error"); break;
 			default:
-				std::cout << "[ Probably complaining about insignificant problems ]" << std::endl; break;
+				std::cout << "\033[30m" << "[ Probably complaining about insignificant problems ]" << "\033[0m" << std::endl; break;
 		}
 	}
 	return (0);

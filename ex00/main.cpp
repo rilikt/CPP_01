@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:16:00 by timschmi          #+#    #+#             */
-/*   Updated: 2024/11/29 15:08:06 by timschmi         ###   ########.fr       */
+/*   Updated: 2024/11/30 12:34:44 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int main(void)
 
 	x = newZombie("Brian");
 	x->announce();
+	delete x;
 	
 	randomChump("Bertha");
-	delete x;
 	
 	return(0);
 }

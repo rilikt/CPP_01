@@ -6,7 +6,7 @@
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/05 12:29:13 by timschmi          #+#    #+#              #
-#    Updated: 2024/11/29 13:03:53 by timschmi         ###   ########.fr        #
+#    Updated: 2024/11/30 13:28:42 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJ = $(SRC:.cpp=.o)
 
 CC = c++
 
-NAME = harlfilter
+NAME = harlFilter
 CFLAGS = -std=c++17 -Wall -Wextra -Werror
 
 all: $(NAME)
